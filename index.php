@@ -34,11 +34,11 @@
                 <?php
                 // only run php if the submit button is pressed
                 if (isset($_POST["submit"])) {
-                    // insert basename() method to return trailing name of path
+                    // insert basename() method to return only the trailing name of path
                     //$name=$_POST['filename'];
                     $name = basename(($_POST['filename']));
-                    // read files of documents in the readFile directory matching user input
-                    $filename = "C:/xampp/htdocs/readFile/" . $name;
+                    // read files of documents in the File_Readerdirectory matching user input
+                    $filename = "C:/xampp/htdocs/File_Reader/" . $name;
 
                     $fileType = pathinfo($filename, PATHINFO_EXTENSION);
 
